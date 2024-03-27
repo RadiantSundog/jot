@@ -7,7 +7,10 @@ function App() {
     return (
         <div>
             <Header />
-            <Note />
+            <Note
+                title="title"
+                content="content"
+            />
             <Footer />
         </div>
     );
