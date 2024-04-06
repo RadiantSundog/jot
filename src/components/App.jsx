@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "./Header";
 import Note from "./Note";
 import Footer from "./Footer";
@@ -18,14 +18,10 @@ function App() {
     return (
         <div>
             <Header />
-            <CreateArea
-                onAdd={addNote}
-            />
-            <Note
-                key={1}
-                title="Note title"
-                content="Note content"
-            />
+            <CreateArea onAdd={addNote} />
+            {notes.map((noteItem) => {
+                return <Note title={noteItem.title} content={noteItem.content} />
+            })}
             <Footer />
         </div>
     );
