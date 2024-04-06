@@ -6,10 +6,17 @@ import CreateArea from "./CreatedArea";
 
 
 function App() {
+
+    function addNote(note) {
+
+    }
+
     return (
         <div>
             <Header />
-            <CreateArea />
+            <CreateArea
+                onAdd={addNote}
+            />
             <Note
                 key={1}
                 title="Note title"
